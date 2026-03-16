@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+/* تعريف الوزن المتوسط (اختياري) */
+@font-face {
+  font-family: "Handicrafts";
+  src: url("fonts/OTF/TheYearofHandicrafts-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
 .about-entity {
   background-color: bisque;
   /* margin-top: 20px; */
