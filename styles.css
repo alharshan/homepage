@@ -1,0 +1,265 @@
+/* تعريف الوزن العادي */
+@font-face {
+  font-family: "Handicrafts";
+  src: url("fonts/OTF/TheYearOfHandicrafts-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* تعريف الوزن العريض */
+@font-face {
+  font-family: "Handicrafts";
+  src: url("fonts/OTF/TheYearOfHandicrafts-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.about-entity {
+  background-color: bisque;
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  background:
+    radial-gradient(
+      ellipse at top left,
+      rgba(51, 51, 51, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(51, 51, 51, 0.06) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(51, 51, 51, 0.02) 0%,
+      rgba(51, 51, 51, 0.05) 100%
+    );
+  /* border-top: solid; */
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 60px;
+  width: 100%;
+}
+h1 {
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  /* margin-top: 20px; */
+}
+h4 {
+  color: #37363675;
+  margin: 0;
+  text-align: center;
+}
+.about-image {
+  border-radius: 50%;
+  border: 4px solid rgba(51, 51, 51, 0.1);
+  padding: 5px;
+  /* margin-top: 7px; */
+  /* box-shadow: 0 8px 24px rgba(51, 51, 51, 0.15); */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about-image:hover {
+  /* 1. جعل الظل أغمق وأوسع ليعطي شعوراً بالارتفاع */
+  /* box-shadow: 0 12px 32px rgba(51, 51, 51, 0.25); */
+
+  /* 2. تكبير الصورة بنسبة بسيطة جداً (5%) */
+  transform: scale(1.05);
+  border-color: rgba(51, 51, 51, 0.2);
+}
+body {
+  font-family: "Cairo", sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+.about-content {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 75px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.title-and-disc {
+  display: flex;
+  flex-direction: column;
+}
+.social-icon {
+  display: flex;
+  align-items: center; /* موازنة الأيقونة عمودياً داخل البوكس */
+  justify-content: center; /* موازنة الأيقونة أفقياً داخل البوكس */
+
+  width: 50px; /* عرض البوكس */
+  height: 50px; /* طول البوكس */
+
+  background-color: #33333314; /* لون خلفية البوكس */
+  border: 1px solid #ccc; /* حدود خفيفة للبوكس */
+  border-radius: 8px; /* زوايا منحنية (اجعلها 50% ليكون دائرة) */
+
+  text-decoration: none; /* إزالة الخط تحت الرابط */
+  color: #333; /* لون الأيقونة */
+  transition: all 0.3s ease; /* تأثير ناعم عند تمرير الماوس */
+}
+/* تأثير عند تمرير الماوس (Hover) */
+.social-icon:hover {
+  background-color: #33333314;
+  transform: translateY(-3px); /* حركة بسيطة للأعلى */
+  border-color: #888888;
+}
+section.about-entity {
+  /* padding-bottom: 30px; */
+  padding-top: 30px;
+}
+h1:hover {
+  /* إضافة ظل للنص */
+  /* القيم: الإزاحة الأفقي، الإزاحة العمودي، التمويه (Blur)، لون الظل */
+  text-shadow: 0px 5px 15px rgba(51, 51, 51, 0.4);
+  /* حركة اختيارية بسيطة للأعلى لتعزيز تأثير الظل */
+  /* transform: translateY(-2px); */
+}
+/* لتغيير حجم كل الأيقونات داخل قسم السوشيال */
+.social-icon iconify-icon {
+  font-size: 20px; /* يمكنك زيادة أو تقليل الرقم حسب رغبتك */
+}
+
+/* السكشن الأساسي */
+section {
+  position: relative; /* ضروري لكي تعمل الخلفية المطلقة بداخله */
+  overflow: hidden; /* لإخفاء الأجزاء الزائدة من الكرات أثناء حركتها */
+  /* padding: 60px 20px; */
+  background-color: #ffffff; /* لون خلفية السكشن الأساسي */
+  z-index: 1;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+
+  /* تدرجات متوازنة: واضحة لكنها لا تشوش على النص */
+  background:
+    radial-gradient(
+      circle at 30% 40%,
+      rgba(51, 51, 51, 0.15) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(51, 51, 51, 0.12) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(51, 51, 51, 0.1) 0%,
+      transparent 25%
+    );
+
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.7; /* درجة عتامة متوسطة */
+
+  animation: orbsMove 20s ease-in-out infinite alternate;
+}
+
+/* تعريف الحركة (Animation) */
+@keyframes orbsMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    /* الأرقام التي أرسلتها سابقاً للحركة العضوية */
+    transform: translate(-2%, 3%) rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: translate(2%, -1%) rotate(360deg) scale(1);
+  }
+}
+
+.main-header {
+  position: relative; /* سيعود الهيدر ليأخذ مساحته الخاصة ويحترم السكشن الذي بعده */
+  width: 100%;
+  background-color: #fafafa;
+  border-bottom: 1px solid rgba(0, 0, 0);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; /* اللوجو جهة والروابط جهة */
+  align-items: center;
+  padding: 15px 10%; /* مسافة جانبية متناسقة مع محتوى الصفحة */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px; /* مسافة بين الروابط */
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #666;
+  position: relative; /* ضروري لضبط مكان الخط */
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0; /* هنا السر: التثبيت جهة اليمين */
+  width: 0; /* يبدأ من الصفر */
+  height: 1px; /* سمك الخط */
+  background-color: #333; /* لون الخط */
+  transition: width 0.3s ease; /* سرعة الانطلاق */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* يتمدد لليسار حتى يغطي النص */
+}
+
+.nav-links a:hover {
+  color: #333; /* تغميق بسيط للنص عند التمرير */
+}
+
+.row-container {
+  display: flex; /* تفعيل نظام الصف المرن */
+  justify-content: center; /* توسيط المحتوى (العمود) أفقياً */
+  width: 100%; /* أخذ عرض الصفحة كاملاً */
+  padding: 40px 0;
+}
+
+.about-bio {
+  font-family: "Handicrafts", sans-serif;
+  direction: rtl;
+  /* text-align: center; */
+  font-size: 1.2rem; /* هذا الخط غالباً ما يحتاج حجمًا أكبر قليلًا */
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 30px auto;
+}
