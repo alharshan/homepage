@@ -261,7 +261,7 @@ section::before {
 }
 
 .about-bio {
-  /* font-family: "Handicrafts", sans-serif; */
+  font-family: "Cairo", sans-serif;
   direction: rtl;
   /* text-align: center; */
   font-size: 18px; /* هذا الخط غالباً ما يحتاج حجمًا أكبر قليلًا */
