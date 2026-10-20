@@ -261,10 +261,10 @@ section::before {
 }
 
 .about-bio {
-  font-family: "Handicrafts", sans-serif;
+  /* font-family: "Handicrafts", sans-serif; */
   direction: rtl;
   /* text-align: center; */
-  font-size: 1.2rem; /* هذا الخط غالباً ما يحتاج حجمًا أكبر قليلًا */
+  font-size: 18px; /* هذا الخط غالباً ما يحتاج حجمًا أكبر قليلًا */
   line-height: 1.8;
   color: #333;
   max-width: 800px;
